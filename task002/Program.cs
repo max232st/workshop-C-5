@@ -4,7 +4,7 @@
 Console.Clear();
 int[] array = new int[4];
 FillArray(array);
-WriteArray(array);
+//WriteArray(array);
 Console.Write("-> ");
 ReversArray(array);
 
@@ -13,24 +13,26 @@ void FillArray(int[] arr)
     for (int i = 0; i < arr.Length; i++)
     {
         arr[i] = new Random().Next(-10, 10);
-    }
-}
-
-void WriteArray(int[] arr)
-{
-    for (int i = 0; i < arr.Length; i++)
-    {
         Console.Write($"{arr[i]} ");
     }
 }
 
+// void WriteArray(int[] arr)
+// {
+//     for (int i = 0; i < arr.Length; i++)
+//     {
+//         Console.Write($"{arr[i]} ");
+//     }
+// }
 void ReversArray(int[] arr)
 {
-    int num = 1;
-    foreach (int el in array)
+    int i = 0;
+    foreach (int el in arr)
     {
+        arr[i] = el * -1;
+        i++;
 
-        num = el * -1;
-        Console.Write($"{num} ");
     }
+
+    Console.WriteLine(string.Join(" ", arr));
 }
