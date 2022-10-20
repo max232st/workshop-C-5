@@ -18,7 +18,6 @@ void FillArray(int[] arr)
         Console.Write($"{arr[i]} ");
     }
 }
-
 void NumArray(int num, int[] arr) // 
 {
     string check = "нет";

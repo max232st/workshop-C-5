@@ -33,6 +33,5 @@ void ReversArray(int[] arr)
         i++;
 
     }
-
     Console.WriteLine(string.Join(" ", arr));
 }
